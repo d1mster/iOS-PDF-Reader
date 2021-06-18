@@ -9,7 +9,7 @@
 import UIKit
 
 /// Delegate that is informed of important interaction events with the pdf page collection view
-protocol PDFPageCollectionViewCellDelegate: class {
+protocol PDFPageCollectionViewCellDelegate: AnyObject {
     func handleSingleTap(_ cell: PDFPageCollectionViewCell, pdfPageView: PDFPageView)
 }
 

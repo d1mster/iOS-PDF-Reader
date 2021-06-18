@@ -9,7 +9,7 @@
 import UIKit
 
 /// Delegate that is informed of important interaction events with the current `PDFPageView`
-protocol PDFPageViewDelegate: class {
+protocol PDFPageViewDelegate: AnyObject {
     /// User has tapped on the page view
     func handleSingleTap(_ pdfPageView: PDFPageView)
 }
@@ -104,7 +104,7 @@ internal final class PDFPageView: UIScrollView {
         singleTapOne.require(toFail: doubleTapOne)
         
         bouncesZoom = false
-        decelerationRate = UIScrollView.DecelerationRate.fast
+        decelerationRate = .fast
         delegate = self
         autoresizesSubviews = true
         autoresizingMask = [.flexibleHeight, .flexibleWidth]

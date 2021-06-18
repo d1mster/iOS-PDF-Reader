@@ -219,7 +219,6 @@ public final class PDFViewController: UIViewController {
         let printInteraction = UIPrintInteractionController.shared
         printInteraction.printInfo = printInfo
         printInteraction.printingItem = document.fileData
-        printInteraction.showsPageRange = true
         printInteraction.present(animated: true, completionHandler: nil)
     }
 }
